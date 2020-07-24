@@ -1,0 +1,703 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+}
+.wrapper
+{
+    width: 100%;
+}
+
+
+/*Top Half of the Page*/
+.header
+{
+    width: 100%;
+    background: url("Background Images\\Header\\provincialbackground.jpg");
+    background-size:100% 400px;
+    background-repeat: no-repeat;
+    height: 400px;
+    text-align: center;
+}
+.topbar 
+{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    background-color: darkgray;
+    height: 60px;
+    opacity: 0.8;
+    z-index: 1000;
+    position: fixed;
+}
+.topbar ul
+{
+    flex: 1.4;
+    align-content: center;
+    justify-content: flex-end;
+    display: flex;
+    list-style: none;
+}
+.topbar h1
+{
+    display: flex;
+    justify-content: flex-start;
+    flex: 0.85;
+    margin-left: 10px;
+    padding: 18px 0px 15px 0px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.topbar ul li
+{
+    padding:22px 8px;
+    border-right: 3px solid white;
+}
+.topbar ul li:last-child
+{
+    border-right: none;
+}
+.topbar ul li a
+{
+    color: black;
+}
+.topbar ul li a:hover
+{
+    color: blue;
+    font-weight: bold;
+}
+.title
+{
+    width: 100%;
+    color: black;
+    opacity: 0.8;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.title h1
+{
+    padding:180px 20px;
+    margin: 0 17px;
+    z-index: 50;
+}
+
+
+/*Navigation Bar Icon*/
+#menuicon
+{
+    flex: 0;
+    width: 0;
+    height: 0;
+}
+.toggle #line1
+{
+    transform: rotate(-45deg) translate(-5px,6px) ; 
+}
+.toggle #line2
+{
+    opacity: 0;
+}
+.toggle #line3
+{
+    transform: rotate(45deg) translate(-5px,-6px) ; 
+}
+.nav-active
+{
+    transform: translateX(0%);
+}
+
+
+/*Provinces of sri lanka*/
+.province
+{
+    width: 100%;
+    padding: 15px 25px;
+    display: grid;
+    background-color: lightgray;
+}
+.province h1
+{
+    color: darkblue;
+    font-size: 35px;
+    border-bottom: 1px solid darkblue;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.provincecontent
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.provinceimage
+{
+    background-color: red;
+    width: 80%;
+}
+.provincedetails
+{
+    width: 90%;
+    padding: 0px 20px;
+}
+.provinceimage img
+{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.provincecontent div
+{
+    margin: 5px;
+}
+.province p
+{
+    padding: 5px;
+}
+.provincedetails ul li
+{
+    padding: 10px 0px;
+}
+
+
+/*Provices selector box division*/
+.provinceselect
+{
+    background-color: lightgrey;
+    text-align: center;
+}
+.provinceselect h3
+{
+    color:darkblue;
+    font-size: 30px;
+    padding-top: 20px;
+}
+.provinceselect select
+{
+    margin-top: 20px;
+    padding: 10px;
+    width: 200px;
+}
+
+
+/*Divs Containing Each Distrcit*/
+.provinces
+{
+    width: 100%;
+    margin:20px auto 0px auto;
+    padding: 15px 25px;
+    background-color: lightgray;
+    justify-content: space-around;
+    color: white;
+    position: absolute;
+    top: 20px;
+}
+.provinces h1
+{
+    color: darkblue;
+    font-size: 35px;
+    border-bottom: 1px solid darkblue;
+    margin-bottom: 25px;
+}
+.provincescontent
+{
+    margin-left: 10% ;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    max-width: 1000px;
+    position: relative;
+}
+.provincecontainer
+{
+    position: relative;
+    background-color: lightgrey;
+    min-height: 700px;
+}
+.arrow
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 100;
+}
+#arrow-left
+{
+    border-width: 20px 30px 20px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 10px;
+}
+#arrow-right
+{
+    border-width: 20px 0px 20px 30px;
+    border-color: transparent  transparent transparent #fff;
+    right: 0;
+    margin-right: 10px;
+}
+.provincescontent::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5 );
+}
+.slide
+{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    align-content: space-around;
+    text-align: center;
+}
+.provincesheader
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 150px;
+    align-self: flex-end;
+}
+.provincesdetails
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 45px;
+    min-height: 350px;
+    margin-right: 45px;
+}
+.provincesheader h2
+{
+    padding: 20px 10px 20px 20px;
+    font-size: 40px;
+    z-index: 100;
+    color: black;
+}
+.provincesdetails p
+{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bolder;
+    max-width: 600px;
+    z-index: 100;
+    padding: 20px 10px 20px 20px;
+}
+
+
+/*Background images of province*/
+#slide1western
+{
+    background: url("Background Images\\Provincial Tourism\\Museum.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+#slide2western
+{
+    background: url("Background Images\\Provincial Tourism\\Galleface.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide1central
+{
+    background: url("Background Images\\Provincial Tourism\\Templeoftoothrelic.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide2central
+{
+    background: url("Background Images\\Provincial Tourism\\Botanicalgarden.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide3central
+{
+    background: url("Background Images\\Provincial Tourism\\Hortanplains.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide1southern
+{
+    background: url("Background Images\\Provincial Tourism\\Fort.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide2southern
+{
+    background: url("Background Images\\Provincial Tourism\\Yala.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide3southern
+{
+    background: url("Background Images\\Provincial Tourism\\Hikkaduwa .jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide1northcentral
+{
+    background: url("Background Images\\Provincial Tourism\\Sigiriya.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide2northcentral
+{
+    background: url("Background Images\\Provincial Tourism\\Polonaruwa.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide3northcentral
+{
+    background: url("Background Images\\Provincial Tourism\\Dambulla.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide1sabaragamuwa
+{
+    background: url("Background Images\\Provincial Tourism\\Sinharaja.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide2sabaragamuwa
+{
+    background: url("Background Images\\Provincial Tourism\\Pinnawala.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide1uva
+{
+    background: url("Background Images\\Provincial Tourism\\Wasgamuwa.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide1northern
+{
+    background: url("Background Images\\Provincial Tourism\\Nallur.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slide1eastern
+{
+    background: url("Background Images\\Provincial Tourism\\Arugambay.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat
+}
+#slide1northwestern
+{
+    background: url("Background Images\\Provincial Tourism\\Yapahuwa.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*Fotter*/
+.fotter
+{
+    background-color: lightgrey;
+    padding-bottom: 10px;
+    color: black;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aboutus
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.aboutuscontent
+{
+    line-height: 20px;
+    margin-top: 15px;
+    max-width: 80%;
+}
+.fotter h1
+{
+    padding-bottom: 10px;
+    max-width: 60%;
+    border-bottom: 1px solid black;
+}
+.aboutuscontent p
+{
+    line-height: 40px;
+    word-spacing: 5px;
+    text-align: center;
+}
+.aboutus p
+{
+    padding:10px;
+}
+.aboutus h2 
+{
+    margin: 10px;
+    font-size: 18px;
+}
+.aboutus ul
+{
+    padding-left: 30px;
+}
+.aboutus ul li
+{
+    padding: 5px;
+}
+.fotter h1
+{
+    font-size: 20px;
+    color: #001;
+    padding-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*Copyright*/
+.copyright
+{
+    background-color:darkblue;
+    font-size: 20px;
+    padding-top: 20px;
+    color: white;
+    height: 40px;
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+}
+.left
+{
+    padding: 10px;
+    position: absolute;
+    left: 0;
+}
+.right 
+{
+    padding: 10px;
+    position: absolute;
+    right:0;
+}
+
+
+/*Changes appear once screen size smaller than 980px*/
+@media (max-width: 980px)
+{
+    /*Navigation bar*/
+    #menuicon
+    {
+        display: block;
+        padding: 18px 14%;
+    }
+    #menuicon div
+    {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        border-radius: 2px;
+        background-color: white;
+        display: block;
+    }
+    .topbar ul 
+    {
+        width: 60%;
+        height: 92vh;
+        background-color: darkgray;
+        justify-content: flex-start;
+        z-index: 1000;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 60px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out ;
+    }
+    .topbar ul li
+    {
+        margin-left: 20px;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 2px solid white;
+        opacity: 0;
+    }
+    .topbar ul li:last-child
+    {
+        border-bottom: none;
+    }
+
+    /*Other Changes*/
+    .provincesheader h2
+    {
+        font-size: 30px;
+    }
+    .copyright
+    {
+        font-size: 15px;
+    }
+    .slide
+    {
+        min-height: 400px;
+    }
+    #arrow-left
+    {
+        border-width: 15px 20px 15px 0;
+        border-color: transparent #fff transparent transparent;
+        left: 0;
+        margin-left: 10px;
+    }
+    #arrow-right
+    {
+        border-width: 15px 0px 15px 20px;
+        border-color: transparent  transparent transparent #fff;
+        right: 0;
+        margin-right: 10px;
+    }
+}
+
+
+/* Changes  appear once screen size smaller than 780px  */
+@media screen and (max-width: 780px){
+
+    /* Changes to topbar and title */
+    .topbar h1
+    {
+        font-size: 25px;
+        padding-left: 5px;
+    }
+    .title 
+    {
+        font-size: 25px;
+    }
+
+
+    /*Other Changes*/
+    .container h1
+    {
+        font-size: 20px;
+    }
+    .provincescontent
+    {
+        margin: 5px;
+    }
+    .provincesheader h2
+    {
+        font-size: 25px;
+    }
+    .provincesheader
+    {
+        height: 70px;
+    }
+    .provincecontainer
+    {
+        min-height: 650px;
+    }
+    .provincecontent
+    {
+        grid-template-columns: 1fr;
+    }
+    .provincesdetails p
+    {
+        font-size: 15px;
+    }
+    .provincesheader
+    {
+        min-height: 100px;
+    }
+    .fotter
+    {
+        grid-template-columns: 1fr ;
+    }
+    .copyright
+    {
+        grid-template-columns: 1fr;
+        height: 50px;
+        font-size: 15px;
+    }
+    .right
+    {
+        left: 0;
+        top:20px;
+        padding-left: 10px;
+    }   
+}
+
+
+/* Changes  appear once screen size smaller than 500px  */
+@media screen and (max-width: 500px){
+
+    /* Changes to topbar and title */
+    .topbar h1
+    {
+        align-self: center;
+        font-size: 18px;
+        padding-left: 5px;
+    }
+    .title 
+    {
+        font-size: 20px;
+    }
+
+
+    /*Other Changes*/
+    .container h1
+    {
+        font-size: 22px;
+    }
+    .provincesdetails p
+    {
+        font-size: 10px;
+    }
+    .fotter
+    {
+        grid-template-columns: 1fr ;
+    }
+    .right
+    {
+        left: 0;
+        top:20px;
+        padding-left: 10px;
+    }   
+}
+@keyframes linkanimation
+{
+    from{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}

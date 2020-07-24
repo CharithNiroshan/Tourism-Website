@@ -1,0 +1,564 @@
+*
+{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+}
+.wrapper
+{
+    width: 100%;
+}
+
+/*Top half css*/
+.header
+{
+    width: 100%;
+    background: url("Background Images\\Header\\58580577_246202279558933_8273801896385314816_n.jpg");
+    background-size:100% 400px;
+    background-repeat: no-repeat;
+    height: 400px;
+    text-align: center;
+    align-content: center;
+}
+.topbar 
+{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    background-color: darkgray;
+    height: 60px;
+    opacity: 0.8;
+    z-index: 1000;
+    position: fixed;
+}
+.topbar ul
+{
+    flex: 1.4;
+    align-content: center;
+    justify-content: flex-end;
+    display: flex;
+    list-style: none;
+}
+.topbar h1
+{
+    display: flex;
+    justify-content: flex-start;
+    flex: 0.85;
+    margin-left: 10px;
+    padding: 18px 0px 15px 0px;
+    font-size: 23px;
+    text-transform: uppercase;  
+}
+.topbar ul li
+{
+    padding:22px 8px;
+    border-right: 3px solid white;
+}
+.topbar ul li:last-child
+{
+    border-right: none;
+}
+.topbar ul li a
+{
+    color: black;
+}
+.topbar ul li a:hover
+{
+    color: blue;
+    font-weight: bold;
+}
+.title
+{
+    width: 100%;
+    flex: 20;
+    color: black;
+    opacity: 0.8;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.title h1
+{
+    padding:180px 0;
+    z-index: 50;
+}
+
+
+/* Navingation Bar Icon */
+#menuicon
+{
+    flex: 0;
+    width: 0;
+    height: 0;
+}
+.toggle #line1
+{
+    transform: rotate(-45deg) translate(-5px,6px) ; 
+
+}
+.toggle #line2
+{
+    opacity: 0;
+}
+.toggle #line3
+{
+    transform: rotate(45deg) translate(-5px,-6px) ; 
+}
+.nav-active
+{
+    transform: translateX(0%);
+}
+
+.container
+{
+    background-color: lightgray;
+}
+
+
+/*menu bar*/
+.navbar
+{
+    width:100% ;
+}
+.navbar ul
+{
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+}
+.main li
+{
+    float: left;
+    width: 33.3333%;
+    height: 40px;
+    text-align: center;
+    background-color:black;
+    opacity: 0.8;
+    line-height: 40px;
+    font-size: 20px;
+    border-right: 2px solid white;
+} 
+.main li:last-child
+{
+    border-right: none;
+}
+.nature li,.culture li
+{
+    float: left;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    display: none;
+    background-color: black;
+    line-height: 40px;
+    border-right: none;
+} 
+.navbar ul li a
+{
+    color: white;
+    display:block;
+}
+.navbar ul li a:hover
+{
+    color: blue;
+    background-color: green;
+    font-weight: bolder;
+}
+.navbar ul li:hover ul li
+{
+    display: block;
+}
+
+
+/*Webapage Details*/
+.wild,.thrills,.Food,.festive,.scenic,.heritage,.pristine
+{
+    width: 95%;
+    margin:10px auto 10px auto;
+    padding: 15px 25px;
+    display: grid;
+}
+.wild h1,.thrills h1,.Food h1,.festive h1,.scenic h1,.heritage h1,.pristine h1
+{
+    color: darkblue;
+    font-size: 35px;
+    border-bottom: 1px solid darkblue;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.thrillcontent,.foodcontent,.sceniccontent,.heritagecontent,.pristinecontent,.wildcontent,.festivecontent
+{
+    display: grid;
+}
+#slideshow
+{
+    width: 64.7%;
+    margin:20px auto;
+    overflow: hidden;
+}
+#slider 
+{
+    width: 100%;
+    display: flex;
+    animation-name: slideshowwild1; 
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-out;
+    animation-duration: 30s;
+    animation-delay: 1s;
+}
+#slider img
+{
+    width: 100%;
+}
+
+
+/*Image slide show animation*/
+@keyframes slideshowwild1
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    25%
+    {
+        transform: translateX(-100%);
+    }
+    50%
+    {
+        transform: translateX(-200%);
+    }
+    75%
+    {
+        transform: translateX(-300%);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+.thrilldetails,.fooddetails
+{
+    margin: 20px;
+}
+.thrilldetails ul li
+{
+    padding: 10px 0;
+}
+
+
+/*Footer css*/
+.fotter
+{
+    background-color: lightgrey;
+    color: black;
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.aboutus
+{
+    padding-top: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.aboutuscontent
+{
+    line-height: 20px;
+    margin-top: 15px;
+    max-width: 80%;
+}
+.fotter h1
+{
+    padding-bottom: 10px;
+    max-width: 60%;
+    border-bottom: 1px solid black;
+}
+.aboutuscontent p
+{
+    line-height: 40px;
+    word-spacing: 5px;
+    text-align: center;
+}
+.aboutus p
+{
+    padding:10px;
+}
+.aboutus h2 
+{
+    margin: 10px;
+    font-size: 18px;
+}
+.aboutus ul
+{
+    padding-left: 30px;
+}
+.aboutus ul li
+{
+    padding: 5px;
+}
+.fotter h1
+{
+    font-size: 20px;
+    color: #001;
+    padding-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*Copyright*/
+.copyright
+{
+    background-color: darkblue;
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+}
+.left
+{
+    padding: 10px;
+    position: absolute;
+    left: 0;
+}
+.right 
+{
+    padding: 10px;
+    position: absolute;
+    right:0;
+}
+
+
+/*Changes appear once screen size smaller than 980px*/
+@media (max-width: 980px)
+{
+    /*Navigation bar*/
+    #menuicon
+    {
+        display: block;
+        padding: 18px 14%;
+    }
+    #menuicon div
+    {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        border-radius: 2px;
+        background-color: white;
+        display: block;
+    }
+    .topbar ul 
+    {
+        width: 40%;
+        height: 92vh;
+        background-color: darkgray;
+        justify-content: flex-start;
+        z-index: 1000;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 60px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out ;
+    }
+    .topbar ul li
+    {
+        margin-left: 20px;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 2px solid white;
+        opacity: 0;
+    }
+    .topbar ul li:last-child
+    {
+        border-bottom: none;
+    }
+
+    /*Other Changes*/
+    .copyright
+    {
+        font-size: 15px;
+    }
+}
+@media (max-width: 780px){
+    .fotter
+    {
+        grid-template-columns: 1fr;
+    }
+    #aboutus1
+    {
+        border-right: none;
+    }
+    .title 
+    {
+        font-size: 25px;
+    }
+    .thrillcontent,.foodcontent,.sceniccontent,.heritagecontent,.pristinecontent,.wild,.festivecontent
+    {
+        font-size: 15px;
+    }
+    #slideshow
+    {
+        width: 90%;
+    }
+    #menuicon
+    {
+        display: block;
+        padding: 18px 14%;
+    }
+    #menuicon div
+    {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        border-radius: 2px;
+        background-color: white;
+        display: block;
+    }
+    .topbar ul 
+    {
+        width: 60%;
+        height: 92vh;
+        background-color: darkgray;
+        justify-content: flex-start;
+        z-index: 1000;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 60px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out ;
+    }
+    .topbar ul li
+    {
+        margin-left: 20px;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 2px solid white;
+        opacity: 0;
+    }
+    .topbar ul li:last-child
+    {
+        border-bottom: none;
+    }
+    .copyright
+    {
+        font-size: 12px;
+    }
+    .copyright
+    {
+        grid-template-columns: 1fr;
+        height: 50px;
+    }
+    .topbar h1
+    {
+        font-size: 21px;
+        padding-left: 5px;
+    }
+    .right
+    {
+        left: 0;
+        top:20px;
+        padding-left: 10px;
+    }  
+}
+
+
+
+/* Changes  appear once screen size smaller than 780px  */
+@media screen and (max-width: 780px){
+
+    /* Changes to topbar and title */
+    .topbar h1
+    {
+        font-size: 25px;
+        padding-left: 5px;
+    }
+    .title 
+    {
+        font-size: 25px;
+    }
+
+
+    /*Other Changes*/
+    .container h1
+    {
+        font-size: 25px;
+    }
+    .copyright
+    {
+        grid-template-columns: 1fr;
+        height: 50px;
+        font-size: 15px;
+    }
+    .fotter
+    {
+        grid-template-columns: 1fr ;
+    }
+    .right
+    {
+        left: 0;
+        top:20px;
+        padding-left: 10px;
+    }   
+}
+
+
+/* Changes  appear once screen size smaller than 500px  */
+@media screen and (max-width: 500px){
+
+    /* Changes to topbar and title */
+    .topbar h1
+    {
+        align-self: center;
+        font-size: 18px;
+        padding-left: 5px;
+    }
+    .title 
+    {
+        font-size: 20px;
+    }
+
+
+    /*Other Changes*/
+    .container h1
+    {
+        font-size: 22px;
+    }
+    .fotter
+    {
+        grid-template-columns: 1fr ;
+    }
+    .right
+    {
+        left: 0;
+        top:20px;
+        padding-left: 10px;
+    }   
+}
+@keyframes linkanimation
+{
+    from{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+

@@ -1,0 +1,547 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+}
+.wrapper
+{
+    width: 100%;
+}
+
+
+/*Top half css*/
+.header
+{
+    width: 100%;
+    background: url("Background Images\\Header\\adams-peak-1000x331.jpg");
+    background-size:100% 400px;
+    background-repeat: no-repeat;
+    height: 400px;
+    text-align: center;
+}
+.topbar 
+{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    background-color: darkgray;
+    height: 60px;
+    opacity: 0.8;
+    z-index: 1000;
+    position: fixed;
+}
+.topbar ul
+{
+    flex: 1.4;
+    align-content: center;
+    justify-content: flex-end;
+    display: flex;
+    list-style: none;
+}
+.topbar h1
+{
+    display: flex;
+    justify-content: flex-start;
+    flex: 0.85;
+    margin-left: 10px;
+    padding: 15px 0px 15px 0px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.topbar ul li
+{
+    
+    padding:22px 8px;
+    border-right: 3px solid white;
+}
+.topbar ul li:last-child
+{
+    border-right: none;
+}
+.topbar ul li a
+{
+    color: black;
+}
+.topbar ul li a:hover
+{
+    color: blue;
+    font-weight: bold;
+}
+.title
+{
+    width: 100%;
+    color: black;
+    opacity: 0.8;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.title h1
+{
+    padding:150px 20px;
+    margin: 0 17px;
+}
+
+
+/*Navigation bar Icon*/
+#menuicon
+{
+    flex: 0;
+    width: 0;
+    height: 0;
+}
+.toggle #line1
+{
+    transform: rotate(-45deg) translate(-5px,6px) ; 
+
+}
+.toggle #line2
+{
+    opacity: 0;
+}
+.toggle #line3
+{
+    transform: rotate(45deg) translate(-5px,-6px) ; 
+}
+.nav-active
+{
+    transform: translateX(0%);
+}
+
+
+/* Details of the page */
+.container 
+{
+    margin-top: -35px;
+    padding-left: 10px;
+    background-color: lightgray;
+}
+
+
+/* history */
+.history
+{
+    width: 95%;
+    margin: 2.5%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.history h1
+{
+    color: darkblue;
+    font-size: 35px;
+    border-bottom: 1px solid darkblue;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* Atractions list */
+.attractions
+{
+    width: 95%;
+    margin: 2.5%;
+    font-size: 18px;
+}
+.attractions h1
+{
+    color: darkblue;
+    font-size: 35px;
+    border-bottom: 1px solid darkblue;
+    margin-bottom: 25px;
+}
+.attrlist
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.attrlist div
+{
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.attrlist button
+{
+    height: 480px;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    margin: 400px 0px 0px 0px;
+    color: white;
+    background-color: black ;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+.attractions button:hover
+{
+    color: blue;
+}
+#wild
+{
+    background: url("Background Images\\Homepage\\Wild.jpg");
+    background-size:cover;
+}
+#thrills
+{
+    background: url("Background Images\\Homepage\\Thrills.jpg");
+    background-size:cover;
+}
+#essence
+{
+    background: url("Background Images\\Homepage\\Essence1.jpg");
+    background-size:cover;
+}
+#festive
+{
+    background: url("Background Images\\Homepage\\Festive.jpg");
+    background-size:cover;
+}
+#scenic
+{
+    grid-column: 1/3;
+    background: url("Background Images\\Homepage\\Scenic.jpg");
+    background-size:cover;
+}
+#heritage
+{
+    background: url("Background Images\\Homepage\\Heritage.jpg");
+    background-size:cover;
+}
+#prisitine
+{
+    background: url("Background Images\\Homepage\\Pristine.jpg");
+    background-size:cover;
+}
+
+
+/*News part*/
+.latestnews
+{
+    float: left;
+    width: 95%;
+    margin: 2.5%;
+    font-size: 18px;
+}
+.latestnews h1
+{
+    color: darkblue;
+    font-size: 35px;
+    padding: 10px;
+    border-bottom: 1px solid darkblue;
+    margin-bottom: 25px;
+}
+.news img
+{
+    padding: 20px;
+    width: 100%;
+    height: 300px;
+}
+.newscontainer
+{
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: repeat(2,1fr);
+}
+.newscontainer div
+{
+    background-color: rgb(127, 252, 127);
+    border-radius: 10px;
+}
+.news  
+{
+    padding:20px 0px;
+    text-align: center;
+    color: black;
+}
+.news a 
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+.news a:hover
+{
+    color: red;
+}
+
+
+/*footer*/
+.fotter
+{
+    background-color: lightgrey;
+    color: black;
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.aboutus
+{
+    padding-top: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.aboutuscontent
+{
+    line-height: 20px;
+    margin-top: 15px;
+    max-width: 80%;
+}
+.fotter h1
+{
+    padding-bottom: 10px;
+    max-width: 60%;
+    border-bottom: 1px solid black;
+}
+.aboutuscontent p
+{
+    line-height: 40px;
+    word-spacing: 5px;
+    text-align: center;
+}
+.aboutus p
+{
+    padding:10px;
+}
+.aboutus h2 
+{
+    margin: 10px;
+    font-size: 18px;
+}
+.aboutus ul
+{
+    padding-left: 30px;
+}
+.aboutus ul li
+{
+    padding: 5px;
+}
+.fotter h1
+{
+    font-size: 20px;
+    color: #001;
+    padding-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*Copyright*/
+.copyright
+{
+    background-color: darkblue;
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+}
+.left
+{
+    padding: 10px;
+    position: absolute;
+    left: 0;
+}
+.right 
+{
+    padding: 10px;
+    position: absolute;
+    right:0;
+}
+
+
+/*Changes appear once screen size smaller than 980px*/
+@media (max-width: 980px)
+{
+    /*Navigation bar*/
+    #menuicon
+    {
+        display: block;
+        padding: 18px 14%;
+    }
+    #menuicon div
+    {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        border-radius: 2px;
+        background-color: white;
+        display: block;
+    }
+    .topbar ul 
+    {
+        width: 60%;
+        height: 92vh;
+        background-color: darkgray;
+        justify-content: flex-start;
+        z-index: 1000;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 60px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out ;
+    }
+    .topbar ul li
+    {
+        margin-left: 20px;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 2px solid white;
+        opacity: 0;
+    }
+    .topbar ul li:last-child
+    {
+        border-bottom: none;
+    }
+
+    /*Other Changes*/
+    .newscontainer
+    {
+        grid-template-columns: 1fr;
+    }
+    .news img 
+    {
+        width: 80%;
+    }
+    .copyright
+    {
+        font-size: 15px;
+    }
+}
+
+
+/* Changes  appear once screen size smaller than 780px  */
+@media screen and (max-width: 780px){
+
+    /* Changes to topbar and title */
+    .topbar h1
+    {
+        font-size: 25px;
+        padding-left: 5px;
+    }
+    .title 
+    {
+        font-size: 25px;
+    }
+
+
+    /*Other Changes*/
+    .attrlist
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .container h1
+    {
+        font-size: 25px;
+    }
+    .latestnews
+    {
+        font-size: 20px;
+    }
+    .history
+    {
+        font-size: 15px;
+    }
+    .attractions button 
+    {
+        font-size: 20px;
+    }
+    .news img 
+    {
+        height: 250px;
+    }
+    .latestnews  
+    {
+        font-size: 15px;
+    }
+    .fotter
+    {
+        grid-template-columns: 1fr ;
+    }
+    .copyright
+    {
+        grid-template-columns: 1fr;
+        height: 50px;
+        font-size: 15px;
+    }
+    .right
+    {
+        left: 0;
+        top:20px;
+        padding-left: 10px;
+    }   
+}
+
+
+/* Changes  appear once screen size smaller than 500px  */
+@media screen and (max-width: 500px){
+
+    /* Changes to topbar and title */
+    .topbar h1
+    {
+        align-self: center;
+        font-size: 18px;
+        padding-left: 5px;
+    }
+    .title 
+    {
+        font-size: 20px;
+    }
+
+
+    /*Other Changes*/
+    .container h1
+    {
+        font-size: 22px;
+    }
+    
+    .news h2
+    {
+        font-size: 20px;
+    }
+    .history
+    {
+        font-size: 15px;
+    }
+    .fotter
+    {
+        grid-template-columns: 1fr ;
+    }
+    .right
+    {
+        left: 0;
+        top:20px;
+        padding-left: 10px;
+    }   
+}
+
+
+/*Animation for links in the Navigation Bar*/
+@keyframes linkanimation
+{
+    from{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
